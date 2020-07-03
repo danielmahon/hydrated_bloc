@@ -1,8 +1,8 @@
 import 'dart:async';
 
+import 'package:bloc/bloc.dart';
 import 'package:hydrated_cubit/hydrated_cubit.dart';
 import 'package:meta/meta.dart';
-import 'package:bloc/bloc.dart';
 
 /// {@template hydrated_bloc}
 /// Specialized [Bloc] which handles initializing the [Bloc] state
@@ -22,9 +22,9 @@ abstract class HydratedBloc<Event, State> extends Bloc<Event, State> {
     }
   }
 
-  /// Instance of [HydratedStorage] which will be used to
+  /// Instance of [Storage] which will be used to
   /// manage persisting/restoring the [Bloc] state.
-  static HydratedStorage storage;
+  static Storage storage;
 
   State _state;
 
